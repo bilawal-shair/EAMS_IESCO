@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "EAMS-IESCO",
+    "name": "Solo-AMS",
     "slug": "EAMS-IESCO",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Appicon/ic_launcher.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#EC1110"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -18,13 +18,30 @@
       "supportsTablet": true
     },
     "android": {
+      "usesCleartextTraffic":true,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/Appicon/ic_launcher.png",
+        "backgroundColor": "#EC1110"
+      },
+      "package": "com.bilawalshair.EAMSIESCO"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1b150ed7-9ac4-473e-9bde-e55a99449e03"
+      }
+  },
+   "plugins":[
+    [
+    "expo-build-properties",
+    {
+      "android":{
+        "usesCleartextTraffic":true
+      }
     }
+  ]
+   ]
   }
 }
