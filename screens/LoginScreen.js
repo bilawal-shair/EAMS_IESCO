@@ -29,7 +29,7 @@ const LoginScreen = () => {
       }
       setIsLoading(true);
       // Your API endpoint
-      const apiUrl = 'http://192.168.18.188/api/Account/Login';
+      const apiUrl = 'http://solochoicez.nayatel.net:8006/api/Account/Login';
 
       // Your request payload
       const data = {
@@ -53,7 +53,7 @@ const LoginScreen = () => {
         await AsyncStorage.setItem('USER', userName);
         await AsyncStorage.setItem('USER_LOGGED_IN', 'true');
 
-           navigation.navigate("home")
+        navigation.navigate("home")
         // Alert.alert('Success!', 'Login successful');
       } else if (response.status === 202) {
         Alert.alert('Error!', 'Invalid Code!');
@@ -109,7 +109,7 @@ const LoginScreen = () => {
 
   return (
     <View style={{ flex: 1, backgroundColor: "#FFF" }}>
-      <View style={{ width: 350, height: "100%", alignSelf: "center", marginTop: 30 }}>
+      <View style={{ width: "93%", height: "100%", alignSelf: "center", marginTop: 30}}>
         <View style={{ width: "100%", height: 200, }}>
           <Image style={{ width: 180, height: 120, alignSelf: "center", marginTop: 50 }} source={require('../assets/Layer_1.jpg')} />
         </View>
@@ -117,14 +117,14 @@ const LoginScreen = () => {
         <View style={{ width: "100%", height: 150, }}>
           <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
             <View style={{ marginTop: 50 }}>
-              <Text style={{ fontSize: 24, fontWeight: "500", color: "black", }}>Login to</Text>
-              <Text style={{ fontSize: 27, fontWeight: "bold", color: "black", marginTop: 3 }}>EAMS</Text>
+              <Text style={{ fontSize: 24, fontWeight: "900", color: "black", }}>Login to</Text>
+              <Text style={{ fontSize: 27, fontWeight: "900", color: "black", marginTop: 3 }}>EAMS</Text>
             </View>
             <Image style={{ width: 100, height: 100, alignSelf: "center", marginTop: 25 }} source={require('../assets/clock.png')} />
           </View>
         </View>
 
-        <View style={{ width: "100%", height: 200, }}>
+        <View style={{ width: "100%", height: 200,bottom:"1%"}}>
           <Text style={{ marginTop: 10, color: "#CAC9C9", marginBottom: 2 }}>Username</Text>
           <View style={{ height: 65, width: "100%", borderWidth: 1, borderColor: isEmailFocused ? "#B81716" : "#D6D6D6", borderRadius: 10 }}>
             <TextInput style={{ height: 65, width: "100%", borderRadius: 10, paddingHorizontal: 20, color: "#B81716" }}
@@ -150,7 +150,7 @@ const LoginScreen = () => {
             />
           </View>
         </View>
-        <View style={{ width: "100%", height: 100 }}>
+        {/* <View style={{ width: "100%", height: 100 }}>
 
           <CheckBox
             title="Remember me"
@@ -161,9 +161,12 @@ const LoginScreen = () => {
             containerStyle={{ marginRight: 50 }}
           />
 
-        </View>
-        <TouchableOpacity onPress={handleLogin} style={{ height: 65, width: "100%", backgroundColor: "#EC1110", borderWidth: 1, borderColor: "#D6D6D6", borderRadius: 10, alignItems: "center", justifyContent: "center" }}>
-          <Text style={{ color: "white", fontSize: 15, fontWeight: "bold" }}>LOGIN</Text>
+        </View> */}
+
+        {/* onPress={handleLogin} */}
+
+        <TouchableOpacity onPress={handleLogin} style={{ top:"6%", height: 65, width: "100%", backgroundColor: "#EC1110", borderWidth: 1, borderColor: "#D6D6D6", borderRadius: 10, alignItems: "center", justifyContent: "center" }}>
+          <Text style={{ color: "white", fontSize: 15, fontWeight: "900" }}>LOGIN</Text>
         </TouchableOpacity>
 
 
